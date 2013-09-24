@@ -16,23 +16,48 @@
 </head>
 <body>
 
-<script type="text/javascript">
-	var dataset = [];
-	for (var i = 0; i < 25; i++) {
-		var newNumber = Math.round(Math.random() * 30);
-		dataset.push(newNumber);
-	}
+<h2>SVGのシェイプ</h2>
+<div>
+	<h4>長方形</h4>
+	<svg width="500" height="50">
+		<rect x="0" y="0" width="500" height="50"/>
+	</svg>
+</div>
 
-	d3.select('body').selectAll('div')
-			.data(dataset)
-			.enter()
-			.append('div')
-			.attr('class', 'bar')
-			.style('height', function(d){
-				var barHeight = d * 5;
-				return barHeight + 'px';
-			});
-</script>
+<div>
+	<h4>円形</h4>
+	<svg width="500" height="50">
+		<circle cx="250" cy="25" r="25"/>
+	</svg>
+</div>
+
+<div>
+	<h4>楕円形</h4>
+	<svg width="500" height="50">
+		<ellipse cx="250" cy="25" rx="100" ry="25"/>
+	</svg>
+</div>
+
+<div>
+	<h4>直線</h4>
+	<svg width="500" height="50">
+		<line x1="0" y1="0" x2="500" y2="50" stroke="black"/>
+	</svg>
+</div>
+
+<div>
+	<h4>文字</h4>
+	<svg width="500" height="50">
+		<text x="250" y="25">javascript</text>
+	</svg>
+</div>
+
+<div>
+	<h4>文字（ベースラインが基準になるので見切れに注意する）</h4>
+	<svg width="500" height="50">
+		<text x="250" y="50" font-family="sans-serif" font-size="25" fill="gray">javascript</text>
+	</svg>
+</div>
 
 </body>
 </html>

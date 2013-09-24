@@ -4,22 +4,30 @@
 	<meta charset="utf-8">
 	<title>D3 Tutorials</title>
 	<script type="text/javascript" src="d3/d3.v3.js"></script>
+	<style type="text/css">
+		div.bar {
+			display: inline-block;
+			width: 20px;
+			height: 75px;   /* この数値は実行時に上書きされます */
+			background-color: teal;
+			margin-right: 2px;
+		}
+	</style>
 </head>
 <body>
 
 <script type="text/javascript">
 	var dataset = [ 5, 10, 15, 20, 25 ];
 
-	d3.select("body").selectAll("p")
+	d3.select('body').selectAll('div')
 			.data(dataset)
 			.enter()
-			.append("p")
-			.text(function(d){return d;})
-			.style('color', function(d){
-				if (d > 15) return 'red';
-				return 'black';
+			.append('div')
+			.attr('class', 'bar')
+			.style('height', function(d){
+				var barHeight = d * 5;
+				return barHeight + 'px';
 			});
-//			.text("新しいパラグラフ！");
 </script>
 
 </body>

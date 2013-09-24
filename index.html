@@ -8,19 +8,13 @@
 <body>
 
 <script type="text/javascript">
-	d3.select('body').append('p').text('新しいパラグラフ');
+	var dataset = [ 5, 10, 15, 20, 25 ];
 
-	// 様々か書き方
-
-	// 複数行に分けて書く
-//	d3.select("body")
-//			.append("p")
-//			.text("新しいパラグラフ！");
-
-	// メソッドチェインを使わないで書く
-//	var body = d3.select("body");
-//	var p = body.append("p");
-//	p.text("新しいパラグラフ！");
+	d3.select("body").selectAll("p")
+			.data(dataset)
+			.enter()
+			.append("p")
+			.text("新しいパラグラフ！");
 </script>
 
 </body>

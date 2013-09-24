@@ -14,7 +14,12 @@
 			.data(dataset)
 			.enter()
 			.append("p")
-			.text("新しいパラグラフ！");
+			.text(function(d){return d;})
+			.style('color', function(d){
+				if (d > 15) return 'red';
+				return 'black';
+			});
+//			.text("新しいパラグラフ！");
 </script>
 
 </body>

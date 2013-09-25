@@ -207,5 +207,44 @@
 	</svg>
 </div>
 
+
+
+<h2>透過性</h2>
+<div>
+	<p>opacityアトリビュートでも指定できるし、rgba()でも指定できる</p>
+	<pre>
+		<code>
+			&lt;circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 1.0)"/&gt;
+			&lt;circle cx="50" cy="25" r="20" fill="rgba(0, 0, 255, 0.75)"/&gt;
+			&lt;circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.5)"/&gt;
+			&lt;circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/&gt;
+			&lt;circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/&gt;
+		</code>
+	</pre>
+	<svg width="500" height="50">
+		<circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 1.0)"/>
+		<circle cx="50" cy="25" r="20" fill="rgba(0, 0, 255, 0.75)"/>
+		<circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.5)"/>
+		<circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/>
+		<circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/>
+	</svg>
+	<p>fillとstrokeに個別に透明度を設定できる</p>
+	<p>円が三重に見えているのは、stroke-width の太さは円周の外側に 10 ピクセルではなく、円周を中心に外側に 5 ピクセル、内側に 5 ピクセルずつ広がっていて（合計 10 ピクセル )、内側が fill の色と重なっているため</p>
+	<pre>
+		<code>
+			&lt;circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 1.0)"/&gt;
+			&lt;circle cx="50" cy="25" r="20" fill="rgba(0, 0, 255, 0.75)"/&gt;
+			&lt;circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.5)"/&gt;
+			&lt;circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/&gt;
+			&lt;circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/&gt;
+		</code>
+	</pre>
+	<svg width="500" height="50">
+		<circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 0.75)" stroke="rgba(0, 255, 0, 0.25)" stroke-width="10"/>
+		<circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.75)" stroke="rgba(0, 0, 255, 0.25)" stroke-width="10"/>
+		<circle cx="125" cy="25" r="20" fill="rgba(255, 255, 0, 0.75)" stroke="rgba(255, 0, 0, 0.25)" stroke-width="10"/>
+	</svg>
+</div>
+
 </body>
 </html>

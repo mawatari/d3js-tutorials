@@ -15,6 +15,11 @@
 		pre {
 			white-space: normal;
 		}
+		svg .pumpkin {
+			fill: yellow;
+			stroke: orange;
+			stroke-width: 5;
+		}
 	</style>
 </head>
 <body>
@@ -147,6 +152,34 @@
 	</svg>
 </div>
 
+<h2>SVGのスタイルをCSSで指定する</h2>
+<div>
+	<p>
+		前述の通り、背景色を指定するプロパティがSVGでは違う<br>
+		通常: background-color<br>
+		SVG: fill<br>
+	</p>
+	<p>
+		以下の通り、セレクタにsvg要素を含めておくと分かりやすい<br>
+	</p>
+	<pre>
+		<code>
+			&lt;circle cx="250" cy="25" r="22" class="pumpkin"/&gt;
+		</code>
+	</pre>
+	<pre>
+		<code>
+			svg .pumpkin {
+				fill: yellow;
+				stroke: orange;
+				stroke-width: 5;
+			}
+		</code>
+	</pre>
+	<svg width="500" height="50">
+		<circle cx="250" cy="25" r="22" class="pumpkin"/>
+	</svg>
+</div>
 
 </body>
 </html>

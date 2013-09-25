@@ -12,6 +12,9 @@
 			background-color: teal;
 			margin-right: 2px;
 		}
+		pre {
+			white-space: normal;
+		}
 	</style>
 </head>
 <body>
@@ -19,6 +22,11 @@
 <h2>SVGのシェイプ</h2>
 <div>
 	<h4>長方形</h4>
+	<pre>
+		<code>
+			&lt;rect x="0" y="0" width="500" height="50"/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<rect x="0" y="0" width="500" height="50"/>
 	</svg>
@@ -26,6 +34,11 @@
 
 <div>
 	<h4>円形</h4>
+	<pre>
+		<code>
+			&lt;circle cx="250" cy="25" r="25"/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<circle cx="250" cy="25" r="25"/>
 	</svg>
@@ -33,6 +46,11 @@
 
 <div>
 	<h4>楕円形</h4>
+	<pre>
+		<code>
+			&lt;ellipse cx="250" cy="25" rx="100" ry="25"/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<ellipse cx="250" cy="25" rx="100" ry="25"/>
 	</svg>
@@ -40,6 +58,11 @@
 
 <div>
 	<h4>直線</h4>
+	<pre>
+		<code>
+			&lt;line x1="0" y1="0" x2="500" y2="50" stroke="black"/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<line x1="0" y1="0" x2="500" y2="50" stroke="black"/>
 	</svg>
@@ -47,6 +70,11 @@
 
 <div>
 	<h4>文字</h4>
+	<pre>
+		<code>
+			&lt;text x="250" y="25"&gt;javascript&lt;/text/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<text x="250" y="25">javascript</text>
 	</svg>
@@ -54,6 +82,11 @@
 
 <div>
 	<h4>文字（ベースラインが基準になるので見切れに注意する）</h4>
+	<pre>
+		<code>
+			&lt;text x="250" y="50" font-family="sans-serif" font-size="25" fill="gray"&gt;javascript&lt;/text/&gt;
+		</code>
+	</pre>
 	<svg width="500" height="50">
 		<text x="250" y="50" font-family="sans-serif" font-size="25" fill="gray">javascript</text>
 	</svg>
